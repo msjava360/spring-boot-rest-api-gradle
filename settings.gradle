@@ -1,0 +1,4 @@
+rootProject.name = 'springbootrestapi'
+include ':organization-service'
+include ':department-service'
+include ':employee-service'
