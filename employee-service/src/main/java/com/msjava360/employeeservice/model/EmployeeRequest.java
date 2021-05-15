@@ -1,5 +1,6 @@
 package com.msjava360.employeeservice.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -12,6 +13,7 @@ public class EmployeeRequest {
 
     private String employeeName;
 
+    @JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ss")
     private Date employeeDob;
 
     private String employeeDesignation;

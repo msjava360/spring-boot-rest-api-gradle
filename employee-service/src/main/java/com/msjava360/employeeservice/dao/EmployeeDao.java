@@ -1,9 +1,11 @@
 package com.msjava360.employeeservice.dao;
 
 import com.msjava360.employeeservice.entity.Employee;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface EmployeeDao {
     Employee addEmployee(Employee employeeRequest);
 
