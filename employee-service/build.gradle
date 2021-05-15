@@ -20,12 +20,32 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
+    //compileOnly 'org.projectlombok:lombok'
+    //annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-    compile 'org.apache.commons:commons-lang3:3.12.0'
-    compile 'org.apache.logging.log4j:log4j-api:2.14.1'
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation 'org.apache.logging.log4j:log4j-api:2.14.1'
+
+    //Data format extension for Jackson to offer alternative support for serializing POJOs as XML and deserializing XML as pojos.
+    compile 'com.fasterxml.jackson.core:jackson-core:2.12.3'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.12.3'
+    compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.12.3'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.12.3'
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.4.5'
+    implementation 'mysql:mysql-connector-java:8.0.24'
+
+    //implementation 'org.mapstruct:mapstruct:1.4.2.Final'
+    //implementation 'org.mapstruct:mapstruct-processor:1.4.2.Final'
+
+    implementation "org.mapstruct:mapstruct:1.4.2.Final"
+    implementation "org.projectlombok:lombok:1.18.20"
+    testImplementation 'junit:junit:4.13.1'
+    annotationProcessor "org.mapstruct:mapstruct-processor:1.4.2.Final"
+    annotationProcessor "org.projectlombok:lombok:1.18.20"
+    annotationProcessor "org.projectlombok:lombok-mapstruct-binding:0.2.0"
+
 }
 
 test {
