@@ -7,7 +7,7 @@ import java.util.List;
 
 @Repository
 public interface EmployeeDao {
-    Employee addEmployee(Employee employeeRequest);
+    Employee addEmployee(Employee employee);
 
     Employee findByEmployeeId(long employeeId);
 

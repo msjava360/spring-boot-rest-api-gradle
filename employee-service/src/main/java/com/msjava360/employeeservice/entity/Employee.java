@@ -1,12 +1,14 @@
 package com.msjava360.employeeservice.entity;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Data
+@AllArgsConstructor
 @Builder
 @Entity
 @Table(name = "employee")
@@ -38,7 +40,7 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(Long employeeId, String employeeName, Date employeeDob, String employeeDesignation, String employeeCity, Long organizationId, Long departmentId) {
+    /*public Employee(Long employeeId, String employeeName, Date employeeDob, String employeeDesignation, String employeeCity, Long organizationId, Long departmentId) {
         this.employeeId = employeeId;
         this.employeeName = employeeName;
         this.employeeDob = employeeDob;
@@ -46,5 +48,5 @@ public class Employee {
         this.employeeCity = employeeCity;
         this.organizationId = organizationId;
         this.departmentId = departmentId;
-    }
+    }*/
 }
